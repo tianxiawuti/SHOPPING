@@ -3,12 +3,12 @@ package edu.hdu.shoppingSystem.StarBucks;
 
 public class StarBucks {
     //just test
-    private static final String BASIC_NAME = "普通咖啡 ";
+    private static final String BASIC_INFO = "普通咖啡 ";
     private static final double BASIC_PRICE = 20;
 
     public void buy(BuyStrategy... strategies){
         PriceServer2 server = new PriceServer2();
-        String buyInfo = BASIC_NAME;
+        String buyInfo = BASIC_INFO;
         double totalPrice = BASIC_PRICE;
         for(BuyStrategy strategy:strategies){
             String info = strategy.getInfo();
