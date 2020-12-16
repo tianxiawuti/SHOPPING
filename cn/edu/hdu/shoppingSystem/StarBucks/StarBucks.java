@@ -1,12 +1,34 @@
 package edu.hdu.shoppingSystem.StarBucks;
 
 
-public class StarBucks {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class StarBucks implements Store {
     //just test
     private static final String BASIC_INFO = "普通咖啡 ";
     private static final double BASIC_PRICE = 20;
 
-    public void buy(BuyStrategy... strategies){
+    @Override
+    public void buy(){
+        List<BuyStrategy> strategies = new ArrayList<>();
+        String input = null;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("除了一杯20元的普通咖啡，您还需要来点什么?");
+        System.out.println("latte   milk    sugar   espresso");
+        System.out.print("输入-1退出:");
+        while(!(input = scanner.nextLine()).equals("-1")){
+            switch (input){
+                case "latte":strategies.add(new BuyLatte());break;
+                case "milk":strategies.add(new BuyMilk());break;
+                case "sugar":strategies.add(new BuySugar());break;
+                case "espresso":strategies.add(new BuyEspresso());break;
+            }
+            System.out.println("latte   milk    sugar   espresso");
+            System.out.print("输入-1退出:");
+        }
+
         PriceServer2 server = new PriceServer2();
         String buyInfo = BASIC_INFO;
         double totalPrice = BASIC_PRICE;
