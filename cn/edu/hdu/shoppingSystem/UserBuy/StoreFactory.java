@@ -1,8 +1,8 @@
 package edu.hdu.shoppingSystem.UserBuy;
 
 
-import cn.edu.hdu.shoppingSystem.StarBucks.StarBucks;
-import cn.edu.hdu.shoppingSystem.Yidiandian.yiDianDian;
+import edu.hdu.shoppingSystem.StarBucks.StarBucks;
+import edu.hdu.shoppingSystem.YiDianDian.yiDianDian;
 
 public class StoreFactory {
     //使用 getStore 方法获取商店类型的对象

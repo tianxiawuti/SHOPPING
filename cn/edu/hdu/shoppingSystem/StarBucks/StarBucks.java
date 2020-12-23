@@ -1,6 +1,8 @@
 package edu.hdu.shoppingSystem.StarBucks;
 
 
+import edu.hdu.shoppingSystem.UserBuy.Store;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -24,6 +26,9 @@ public class StarBucks implements Store {
                 case "milk":strategies.add(new BuyMilk());break;
                 case "sugar":strategies.add(new BuySugar());break;
                 case "espresso":strategies.add(new BuyEspresso());break;
+                default:
+                    System.out.println("请输入正确配料");
+                    break;
             }
             System.out.println("latte   milk    sugar   espresso");
             System.out.print("输入-1退出:");

@@ -1,4 +1,4 @@
-package edu.hdu.shoppingSystem.yiDianDian;
+package edu.hdu.shoppingSystem.YiDianDian;
 import java.util.*;
 
 public class item {
